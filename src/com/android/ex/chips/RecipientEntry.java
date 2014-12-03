@@ -271,7 +271,7 @@ public class RecipientEntry {
     }
 
     public String getDestination() {
-        return mDestination;
+        return mDestination != null ? mDestination.trim() : null;
     }
 
     public int getDestinationType() {
