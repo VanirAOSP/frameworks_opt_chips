@@ -334,9 +334,14 @@ public class RecipientEntry {
                 || mEntryType == ENTRY_TYPE_GROUP;
     }
 
+    /** @hide **/
+    protected String getAddress() {
+        return mDisplayName + " <" + mDestination + ">";
+    }
+
     @Override
     public String toString() {
-        return mDisplayName + " <" + mDestination + ">, isValid=" + mIsValid;
+        return getAddress() + ", isValid=" + mIsValid;
     }
 
     /**
