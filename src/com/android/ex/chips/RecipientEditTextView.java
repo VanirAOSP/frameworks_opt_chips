@@ -1434,7 +1434,7 @@ public class RecipientEditTextView extends MultiAutoCompleteTextView implements
     }
 
     private String tokenizeAddress(String destination) {
-        if (getAdapter().isPhoneQuery() && isPhoneNumber(destination)) {
+        if (getAdapter().isPhoneQuery() && PhoneUtil.isPhoneNumber(destination)) {
             return PhoneNumberUtils.formatNumberToE164(destination,
                 Locale.getDefault().getCountry());
         } else {
@@ -3439,6 +3439,6 @@ public class RecipientEditTextView extends MultiAutoCompleteTextView implements
      * @return true if still tokenizing contacts, false otherwise
      */
     protected boolean isChipping() {
-        return !mNoChips;
+        return !mNoChipMode;
     }
 }
