@@ -158,8 +158,8 @@ public class RecipientEditTextView extends MultiAutoCompleteTextView implements
     private final int mTextHeight;
     private boolean mDisableDelete;
     private int mMaxLines;
-    private int mMaxChipsParsed;
     private int mWarningIconHeight;
+    private int mMaxChipsParsed;
 
     /**
      * Enumerator for avatar position. See attr.xml for more details.
